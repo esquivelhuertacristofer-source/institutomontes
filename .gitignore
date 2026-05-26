@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# heavy assets & raw files
+*.zip
+/*.png
+/Instagram post matrículas escolares abertas roxo e amarelo colorido/
+/Instagram post matrículas escolares abertas roxo e amarelo colorido (1)/
+/stitch_instituto_educativo_montes/
