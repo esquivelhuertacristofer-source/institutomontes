@@ -150,7 +150,7 @@ export default function LatestActivities() {
             <Calendar className="h-4 w-4" />
             Vida Escolar Montes
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-white mt-5 tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white mt-5 tracking-tight leading-[1.02]">
             Últimas Actividades y Efemérides
           </h2>
           <p className="font-sans text-white/70 mt-4 text-lg leading-relaxed font-semibold">

@@ -219,7 +219,7 @@ export default function DiffGrid() {
           <span className="text-sm font-extrabold text-accent-gold-dark bg-accent-gold/15 border border-accent-gold/25 px-4 py-1.5 rounded-full uppercase tracking-widest">
             ¿Por qué elegir Instituto Montes?
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-primary-dark tracking-tight leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-primary-dark tracking-tight leading-[1.02]">
             Los Beneficios que Aseguran el Éxito de tu Hijo
           </h2>
           <p className="font-sans text-base sm:text-lg text-primary-dark/70 max-w-2xl mt-2 leading-relaxed font-medium">

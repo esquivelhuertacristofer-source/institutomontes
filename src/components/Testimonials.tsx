@@ -129,7 +129,7 @@ export default function Testimonials() {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-gold/10 border border-accent-gold/25 text-accent-gold text-xs font-bold uppercase tracking-wider">
             Testimonios de Nuestra Familia
           </span>
-          <h3 className="font-display font-black text-4xl sm:text-5xl text-white tracking-tight">
+          <h3 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white tracking-tight leading-[1.02]">
             Lo que los Padres opinan de Nosotros
           </h3>
           <div className="w-16 h-1.5 bg-accent-gold rounded-full mt-2"></div>

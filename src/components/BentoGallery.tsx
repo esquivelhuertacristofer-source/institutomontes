@@ -221,7 +221,7 @@ export default function BentoGallery() {
           <span className="text-sm font-extrabold text-accent-gold bg-accent-gold/10 border border-accent-gold/25 px-4 py-1.5 rounded-full uppercase tracking-widest">
             Instalaciones Montes
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-white mt-5 tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white mt-5 tracking-tight leading-[1.02]">
             Nuestros Espacios Educativos
           </h2>
           <p className="font-sans text-white/70 mt-4 text-lg leading-relaxed font-semibold">

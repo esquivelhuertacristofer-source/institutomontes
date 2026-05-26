@@ -166,7 +166,7 @@ export default function LocationMap() {
             <MapPin className="h-4 w-4" />
             Cómo Llegarnos
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-primary-dark mt-5 tracking-tight leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-primary-dark mt-5 tracking-tight leading-[1.02]">
             Encuéntranos en <span className="text-primary-blue">Toluca</span>
           </h2>
           <p className="font-sans text-primary-dark/70 mt-4 text-lg leading-relaxed font-semibold">

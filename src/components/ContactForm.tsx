@@ -36,7 +36,7 @@ export default function ContactForm() {
           <span className="text-sm font-extrabold text-accent-gold bg-accent-gold/10 border border-accent-gold/25 px-4 py-1.5 rounded-full uppercase tracking-widest">
             Admisiones & Informes
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-white mt-5 tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white mt-5 tracking-tight leading-[1.02]">
             Inicia el Proceso de Inscripción
           </h2>
           <p className="font-sans text-white/70 mt-4 text-base sm:text-lg leading-relaxed">

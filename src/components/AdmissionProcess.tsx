@@ -122,7 +122,7 @@ export default function AdmissionProcess() {
           <span className="text-sm font-extrabold text-primary-blue bg-primary-blue/10 border border-primary-blue/15 px-4 py-1.5 rounded-full uppercase tracking-widest">
             Admisiones Abiertas
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-primary-dark mt-5 tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-primary-dark mt-5 tracking-tight leading-[1.02]">
             Proceso de Admisión en 4 Pasos
           </h2>
           <p className="font-sans text-primary-dark/70 mt-4 text-lg leading-relaxed">

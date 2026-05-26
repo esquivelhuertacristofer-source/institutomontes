@@ -13,11 +13,9 @@ export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const badgeRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
   const btnsRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  const trustRef = useRef<HTMLParagraphElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
   const magnetButtonRef = useRef<HTMLAnchorElement>(null);
 
@@ -63,7 +61,7 @@ export default function Hero() {
   useGSAP(
     () => {
       // Set initial hidden states to prevent flash
-      gsap.set([badgeRef.current, titleRef.current, textRef.current, btnsRef.current, trustRef.current], {
+      gsap.set([titleRef.current, textRef.current, btnsRef.current], {
         opacity: 0,
         y: 30,
       });
@@ -73,12 +71,10 @@ export default function Hero() {
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.to(badgeRef.current, { opacity: 1, y: 0, duration: 0.6 })
-        .to(titleRef.current, { opacity: 1, y: 0, duration: 0.8 }, "-=0.4")
-        .to(textRef.current, { opacity: 1, y: 0, duration: 0.7 }, "-=0.6")
+      tl.to(titleRef.current, { opacity: 1, y: 0, duration: 0.8 })
+        .to(textRef.current, { opacity: 1, y: 0, duration: 0.7 }, "-=0.5")
         .to(btnsRef.current, { opacity: 1, y: 0, duration: 0.6 }, "-=0.5")
-        .to(trustRef.current, { opacity: 1, y: 0, duration: 0.5 }, "-=0.5")
-        .to(imageContainerRef.current, { opacity: 1, scale: 1, y: 0, duration: 1, ease: "back.out(1.2)" }, "-=0.8")
+        .to(imageContainerRef.current, { opacity: 1, scale: 1, y: 0, duration: 1, ease: "back.out(1.2)" }, "-=0.4")
         .to(
           [".floating-badge-1", ".floating-badge-2", ".floating-badge-3"],
           { opacity: 1, scale: 1, duration: 0.6, stagger: 0.15, ease: "back.out(1.5)" },
@@ -131,11 +127,11 @@ export default function Hero() {
     { scope: containerRef }
   );
 
-  const handleScrollToPrograms = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const programsSection = document.getElementById("programas");
-    if (programsSection) {
-      programsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    const contactSection = document.getElementById("contacto");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -155,35 +151,16 @@ export default function Hero() {
         <div className="absolute bottom-1/3 right-1/10 w-96 h-96 bg-accent-gold/10 rounded-full blur-[150px]"></div>
       </div>
 
-      {/* Floating 3D/Vector elements */}
-      <div className="absolute left-[8%] top-[25%] hidden xl:block floating-star pointer-events-none">
-        <div className="relative w-14 h-14 bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center rotate-12 shadow-lg">
-          <Sparkles className="h-6 w-6 text-accent-gold" />
-        </div>
-      </div>
-
-      <div className="absolute right-[46%] top-[20%] hidden xl:block floating-circle pointer-events-none">
-        <div className="relative w-12 h-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg">
-          <BookOpen className="h-5 w-5 text-white/80" />
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full max-w-full flex-1 flex flex-col justify-center relative overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full max-w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex-1 flex flex-col justify-center relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full overflow-hidden">
           
           {/* Headline and CTAs */}
-          <div className="col-span-full lg:col-span-6 w-full max-w-full px-4 sm:px-0 flex flex-col items-center lg:items-start gap-6 relative z-10 text-center lg:text-left">
-            {/* Prominent level badges */}
-            <div ref={badgeRef} className="self-center lg:self-start w-full px-4 sm:px-0">
-              <span className="text-accent-gold text-[10px] sm:text-xs lg:text-sm font-extrabold uppercase tracking-[0.1em] sm:tracking-[0.2em] block mb-1 text-center lg:text-left leading-normal">
-                Primaria Bilingüe Particular • Incorporación Oficial SEP
-              </span>
-            </div>
-
+          <div className="col-span-full lg:col-span-6 w-full px-4 sm:px-0 flex flex-col items-center lg:items-start gap-6 relative z-10 text-center lg:text-left">
+            
             {/* Powerful Commercial Title */}
             <h1
               ref={titleRef}
-              className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white tracking-tight leading-[1.02] w-full px-2 sm:px-0"
+              className="font-display font-black text-3xl sm:text-5xl lg:text-[4.3rem] xl:text-[5.2rem] text-white tracking-tight leading-[1.02] w-full px-6 lg:px-0 text-center lg:text-left"
             >
               Primaria de excelencia <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-emerald-300 drop-shadow-[0_2px_10px_rgba(16,185,129,0.2)]">
@@ -194,7 +171,7 @@ export default function Hero() {
             {/* High-conversion Subtext */}
             <p
               ref={textRef}
-              className="font-sans text-sm sm:text-base lg:text-[1.125rem] xl:text-[1.25rem] text-white/75 leading-relaxed max-w-xl font-medium mx-auto lg:mx-0 w-full px-2 sm:px-0"
+              className="font-sans text-sm sm:text-base lg:text-[1.125rem] xl:text-[1.25rem] text-white/75 leading-relaxed max-w-xl font-medium mx-auto lg:mx-0 w-full px-6 lg:px-0 text-center lg:text-left"
             >
               Formamos mentes brillantes y líderes integrales en nivel primaria con robótica avanzada, educación financiera práctica, inglés intensivo y sólidos valores humanos. Con incorporación oficial de la SEP, asegura un lugar en la primaria premium líder de Toluca.
             </p>
@@ -214,24 +191,12 @@ export default function Hero() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="#programas"
-                onClick={handleScrollToPrograms}
+                href="#contacto"
+                onClick={handleScrollToContact}
                 className="w-full sm:w-auto text-center justify-center px-8 py-4.5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-sm text-white font-display font-extrabold text-base hover:bg-white/15 transition-all hover:scale-102 shadow-lg"
               >
-                Conocer Programas
+                Inscríbete ahora!
               </a>
-            </div>
-
-            {/* Urgency Micro-copy & Trust indicators */}
-            <div ref={trustRef} className="flex flex-col sm:flex-row sm:items-center items-center lg:items-start gap-4 mt-2">
-              <p className="font-sans text-xs sm:text-sm text-white/70 font-semibold flex items-center gap-1.5">
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent-gold animate-ping"></span>
-                Inscripciones abiertas ciclo escolar 2026-2027
-              </p>
-              <span className="hidden sm:block text-white/20">|</span>
-              <p className="font-sans text-xs sm:text-sm text-white/60 italic">
-                * Grupos reducidos para garantizar atención personalizada.
-              </p>
             </div>
           </div>
 
