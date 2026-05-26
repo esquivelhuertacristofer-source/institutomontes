@@ -276,68 +276,81 @@ export default function ProgramDetails() {
           </button>
  
           {/* Carousel Card Slider Wrapper */}
-          <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 border border-white/20 shadow-[0_25px_60px_-15px_rgba(16,185,129,0.3)] relative">
-            <div 
-              className="w-full h-full"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
+          <div
+            className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_25px_60px_-15px_rgba(16,185,129,0.3)] relative bg-[#0a1f45]"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              <div 
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {programs.map((prog, idx) => {
-                  return (
-                    <div key={prog.id} className="w-full shrink-0 p-8 sm:p-12 lg:p-16">
-                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        
-                        {/* Left Column: Details */}
-                        <div className="lg:col-span-7 text-left flex flex-col gap-6">
-                          <div className="flex items-center gap-4">
-                            <div className="p-3 rounded-2xl bg-white/15 text-white border border-white/25 backdrop-blur-md shadow-lg shrink-0">
-                               {prog.icon}
-                            </div>
-                            <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
-                              {prog.title}
-                            </h3>
-                          </div>
- 
-                          <p className="font-sans text-emerald-50/95 text-base sm:text-lg leading-relaxed font-medium">
-                            {prog.fullDesc}
-                          </p>
- 
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-                            {prog.bullets.map((bullet, bulletIdx) => (
-                              <li key={bulletIdx} className="flex items-start gap-2.5 text-sm text-white font-semibold">
-                                <CheckCircle className="h-5 w-5 text-emerald-300 shrink-0 mt-0.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
- 
-                        {/* Right Column: Image */}
-                        <div className="lg:col-span-5 flex justify-center items-center relative min-h-[260px] lg:min-h-[320px]">
-                          {/* Dynamic glow behind the illustration */}
-                          <div className="absolute w-64 h-64 bg-white/20 rounded-full filter blur-3xl opacity-75 animate-pulse"></div>
-                          
-                          <div className="relative animate-float w-full max-w-[280px] aspect-square rounded-3xl bg-white border border-white/25 shadow-[0_25px_50px_rgba(0,0,0,0.35)] group/img hover:scale-105 transition-transform duration-500 overflow-hidden">
-                            <Image
-                              src={prog.image}
-                              alt={prog.title}
-                              width={280}
-                              height={280}
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
-                            />
-                          </div>
-                        </div>
+              {programs.map((prog) => {
+                return (
+                  <div key={prog.id} className="w-full shrink-0 relative min-h-[420px] lg:min-h-[460px] flex items-stretch">
 
+                    {/* === Full-bleed background image on the right === */}
+                    <div className="absolute inset-0 flex">
+                      {/* Left dark zone */}
+                      <div className="w-full lg:w-[55%] shrink-0 bg-transparent" />
+                      {/* Right image zone */}
+                      <div className="hidden lg:block flex-1 relative overflow-hidden">
+                        <Image
+                          src={prog.image}
+                          alt={prog.title}
+                          fill
+                          sizes="600px"
+                          className="object-cover object-center"
+                        />
+                        {/* Gradient fade: image bleeds into left dark area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f45] via-[#0a1f45]/60 to-transparent" />
+                        {/* Bottom fade */}
+                        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a1f45]/80 to-transparent" />
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+
+                    {/* === Text content (sits on top of the layered background) === */}
+                    <div className="relative z-10 p-8 sm:p-12 lg:p-14 flex items-center w-full">
+                      <div className="w-full lg:w-[58%] text-left flex flex-col gap-6">
+                        <div className="flex items-center gap-4">
+                          <div className="p-3 rounded-2xl bg-white/10 text-white border border-white/20 backdrop-blur-md shadow-lg shrink-0">
+                            {prog.icon}
+                          </div>
+                          <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-tight">
+                            {prog.title}
+                          </h3>
+                        </div>
+
+                        <p className="font-sans text-white/80 text-base sm:text-lg leading-relaxed font-medium">
+                          {prog.fullDesc}
+                        </p>
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
+                          {prog.bullets.map((bullet, bulletIdx) => (
+                            <li key={bulletIdx} className="flex items-start gap-2.5 text-sm text-white/90 font-semibold">
+                              <CheckCircle className="h-5 w-5 text-accent-gold shrink-0 mt-0.5" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {/* Mobile-only image thumbnail */}
+                        <div className="lg:hidden relative w-full h-48 rounded-2xl overflow-hidden mt-2 border border-white/10">
+                          <Image
+                            src={prog.image}
+                            alt={prog.title}
+                            fill
+                            className="object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f45]/60 to-transparent" />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                );
+              })}
             </div>
           </div>
 

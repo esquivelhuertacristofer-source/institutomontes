@@ -271,7 +271,7 @@ export default function Hero() {
       {/* Centered bounding box for absolute elements (preserves height for percentage-based sizing) */}
       <div className="absolute top-[120px] bottom-[180px] xl:bottom-[200px] 2xl:bottom-[220px] left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 lg:px-8 pointer-events-none z-10 hidden lg:block">
         {/* Desktop Absolute Student Image (Large, corner-anchored but shifted up and in) */}
-        <div className="absolute lg:right-[-3%] xl:right-[-6%] 2xl:right-[-8%] bottom-0 lg:w-[48%] xl:w-[52%] 2xl:w-[55%] h-full max-h-[580px] xl:max-h-[660px] 2xl:max-h-[740px] pointer-events-none select-none overflow-visible">
+        <div className="absolute lg:right-[-5%] xl:right-[-8%] 2xl:right-[-10%] bottom-0 lg:w-[56%] xl:w-[60%] 2xl:w-[64%] h-full max-h-[640px] xl:max-h-[740px] 2xl:max-h-[820px] pointer-events-none select-none overflow-visible">
           <div className="relative w-full h-full flex justify-end items-end overflow-visible">
             {/* Ambient Background Aura */}
             <div className="absolute w-[520px] h-[520px] bg-accent-gold/10 rounded-full blur-[110px] pointer-events-none animate-pulse z-0 right-10 bottom-10"></div>
@@ -305,7 +305,7 @@ export default function Hero() {
 
             {/* Floating Badges */}
             {/* Badge 1: Robótica */}
-            <div className="absolute lg:left-[-20px] xl:left-[-55px] 2xl:left-[-85px] top-[26%] bg-white/95 backdrop-blur-md border border-accent-gold/25 px-4.5 py-3 rounded-2xl shadow-[0_20px_45px_rgba(16,185,129,0.15)] flex items-center gap-3 z-20 floating-badge-1 hover:scale-105 transition-all duration-300 pointer-events-auto">
+            <div className="absolute lg:left-[-20px] xl:left-[-55px] 2xl:left-[-85px] top-[44%] bg-white/95 backdrop-blur-md border border-accent-gold/25 px-4.5 py-3 rounded-2xl shadow-[0_20px_45px_rgba(16,185,129,0.15)] flex items-center gap-3 z-20 floating-badge-1 hover:scale-105 transition-all duration-300 pointer-events-auto">
               <span className="flex h-8 w-8 rounded-lg bg-accent-gold/15 items-center justify-center shrink-0">
                 <Cpu className="h-4.5 w-4.5 text-accent-gold-dark" />
               </span>
