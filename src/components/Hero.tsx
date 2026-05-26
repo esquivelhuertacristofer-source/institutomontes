@@ -195,7 +195,7 @@ export default function Hero() {
                 onClick={handleScrollToContact}
                 className="w-full sm:w-auto text-center justify-center px-8 py-4.5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-sm text-white font-display font-extrabold text-base hover:bg-white/15 transition-all hover:scale-102 shadow-lg"
               >
-                Inscríbete ahora!
+                ¡Inscríbete ahora!
               </a>
             </div>
           </div>
