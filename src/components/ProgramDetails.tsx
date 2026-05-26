@@ -277,7 +277,7 @@ export default function ProgramDetails() {
  
           {/* Carousel Card Slider Wrapper */}
           <div
-            className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_25px_60px_-15px_rgba(16,185,129,0.3)] relative bg-[#0a1f45]"
+            className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_25px_60px_-15px_rgba(16,185,129,0.4)] relative bg-gradient-to-br from-emerald-700 via-emerald-800 to-teal-900"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -292,7 +292,7 @@ export default function ProgramDetails() {
 
                     {/* === Full-bleed background image on the right === */}
                     <div className="absolute inset-0 flex">
-                      {/* Left dark zone */}
+                      {/* Left green zone */}
                       <div className="w-full lg:w-[55%] shrink-0 bg-transparent" />
                       {/* Right image zone */}
                       <div className="hidden lg:block flex-1 relative overflow-hidden">
@@ -303,10 +303,10 @@ export default function ProgramDetails() {
                           sizes="600px"
                           className="object-cover object-center"
                         />
-                        {/* Gradient fade: image bleeds into left dark area */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f45] via-[#0a1f45]/60 to-transparent" />
+                        {/* Gradient fade: image bleeds into left green area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-800 via-emerald-800/65 to-transparent" />
                         {/* Bottom fade */}
-                        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a1f45]/80 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-emerald-900/80 to-transparent" />
                       </div>
                     </div>
 
@@ -343,7 +343,7 @@ export default function ProgramDetails() {
                             fill
                             className="object-cover object-center"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f45]/60 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 to-transparent" />
                         </div>
                       </div>
                     </div>
