@@ -197,7 +197,7 @@ export default function ProgramDetails() {
             Programas Académicos y Plataformas
           </h2>
           <p className="font-sans text-white/70 mt-4 text-lg leading-relaxed">
-            Un plan de estudio completo que expande los límites de la educación unconventional y 
+            Un plan de estudio completo que expande los límites de la educación no convencional y
             forma estudiantes competentes y humanos en un entorno de alto nivel.
           </p>
         </div>

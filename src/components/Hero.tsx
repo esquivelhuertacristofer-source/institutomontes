@@ -216,7 +216,7 @@ export default function Hero() {
                 maskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)',
                 WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)',
               }}
-              className="relative w-full max-w-[280px] sm:max-w-[500px] h-[360px] sm:h-[550px] select-none z-10 flex justify-center items-end overflow-visible pointer-events-none"
+              className="relative w-full max-w-[320px] sm:max-w-[520px] h-[420px] sm:h-[580px] select-none z-10 flex justify-center items-end overflow-visible pointer-events-none"
             >
               <div className="relative w-full h-[120%] max-h-[600px]">
                 <Image
@@ -316,7 +316,7 @@ export default function Hero() {
             </div>
 
             {/* Badge 2: Inglés */}
-            <div className="absolute lg:right-[-5px] xl:right-[-15px] 2xl:right-[-20px] top-[48%] bg-primary-blue/95 backdrop-blur-md border border-white/25 px-4.5 py-3 rounded-2xl shadow-[0_20px_45px_rgba(29,78,216,0.25)] flex items-center gap-3 z-20 floating-badge-2 hover:scale-105 transition-all duration-300 pointer-events-auto">
+            <div className="absolute lg:right-[8px] xl:right-[5px] 2xl:right-[0px] top-[48%] bg-primary-blue/95 backdrop-blur-md border border-white/25 px-4.5 py-3 rounded-2xl shadow-[0_20px_45px_rgba(29,78,216,0.25)] flex items-center gap-3 z-20 floating-badge-2 hover:scale-105 transition-all duration-300 pointer-events-auto">
               <span className="flex h-8 w-8 rounded-lg bg-white/20 items-center justify-center shrink-0">
                 <BookOpen className="h-4.5 w-4.5 text-white" />
               </span>
