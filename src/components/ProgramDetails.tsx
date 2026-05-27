@@ -335,15 +335,17 @@ export default function ProgramDetails() {
                           ))}
                         </ul>
 
-                        {/* Mobile-only image thumbnail */}
-                        <div className="lg:hidden relative w-full h-48 rounded-2xl overflow-hidden mt-2 border border-white/10">
+                        {/* Mobile-only image — full width, natural aspect ratio, no clipping */}
+                        <div className="lg:hidden w-full rounded-2xl overflow-hidden mt-2 border border-white/10 relative">
                           <Image
                             src={prog.image}
                             alt={prog.title}
-                            fill
-                            className="object-cover object-center"
+                            width={800}
+                            height={600}
+                            className="w-full h-auto object-cover"
+                            sizes="(max-width: 1024px) 100vw, 0px"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 to-transparent" />
+                          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-emerald-900/80 to-transparent" />
                         </div>
                       </div>
                     </div>
